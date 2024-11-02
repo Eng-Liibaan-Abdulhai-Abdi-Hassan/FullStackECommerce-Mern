@@ -1,0 +1,30 @@
+{
+  "name": "full-stack-ecommerce-mern",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./backend/Server.js",
+    "build": "npm i && npm i --prefix frontend && npm run build --prefix frontend ",
+    "server": "nodemon ./backend/Server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.1",
+    "nodemailer": "^6.9.15",
+    "nodemon": "^3.1.7",
+    "socket.io": "^4.8.0",
+    "stripe": "^17.2.0"
+  }
+}
