@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./backend/Server.js",
-    "build": "npm i && npm i ",
+    "build": "npm i && npm i --prefix frontend && npm run build --prefix frontend ",
     "server": "nodemon ./backend/Server.js"
   },
   "keywords": [],

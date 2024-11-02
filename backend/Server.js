@@ -13,8 +13,8 @@ app.use("/api/product", require("./routes/ProductRoutes"));
 app.use("/api/product", require("./routes/ProductCategoryRoutes"));
 app.use("/api/addcart", require("./routes/AddCartRoutes"));
 app.use("/api/order", require("./routes/OrderRoutes"));
-// app.use(express.static(path.join(__dirname, "../frontend/dist")))
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
-// });
+app.use(express.static(path.join(__dirname, "../frontend/dist")))
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+});
 server.listen(PORT, db, () => console.log("listening on port 3000"));

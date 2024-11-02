@@ -6,7 +6,7 @@ import { FaCloudUploadAlt } from "react-icons/fa";
 import ImageBase64 from "../../helpers/ImageBase64";
 import ApiData from "../../Api/ApiData";
 import { useusercontext } from "../../context/Context";
-const UploadUser = ({ close, fetch }) => {
+const CreateUser = ({ close, fetch }) => {
   const [viewimage, setviewimage] = useState(false);
   const [imagedata, setimagedata] = useState("");
   const { authlogin } = useusercontext();
@@ -20,7 +20,7 @@ const UploadUser = ({ close, fetch }) => {
     id: authlogin?._id,
   });
 
-  const { uploadUser,fetchAllusers } = ApiData();
+  const { uploadUser } = ApiData();
 
   const HandleImage = (e) => {
     let images = e.target.files;
@@ -217,4 +217,4 @@ const UploadUser = ({ close, fetch }) => {
   );
 };
 
-export default UploadUser;
+export default CreateUser;

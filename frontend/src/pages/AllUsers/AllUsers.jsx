@@ -2,8 +2,9 @@ import { useState } from "react";
 import UserCard from "./UserCard";
 import axios from "axios";
 import ApiData from "../../Api/ApiData";
-import Uploaduser from "./Uploaduser";
+import CreateUser from "./CreateUser";
 axios.defaults.withCredentials = true;
+
 const AllUsers = () => {
   const [isupload, setisupload] = useState(false);
   const { fetchAllusers, allusers } = ApiData();
@@ -35,7 +36,7 @@ const AllUsers = () => {
       {/* userList */}
 
       {isupload && (
-        <Uploaduser
+        <CreateUser
         fetch={fetchAllusers}
         close={() => setisupload(false)}
         />
