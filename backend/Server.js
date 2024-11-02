@@ -4,7 +4,7 @@ const cors = require("cors");
 const path = require("path");
 const db = require("./config/mongodb");
 const { server, app } = require("./config/socket");
-app.use(cors({ origin: "http://localhost:4000", Credential: true }));
+app.use(cors({ origin: "https://fullstackecommerce-mern.onrender.com", Credential: true }));
 let PORT = 3000 || process.env.PORT;
 app.use(express.json({ limit: "50mb" }));
 app.use("/api/user", require("./routes/UserRoutes"));
