@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Uploaduser from "./Uploaduser";
 import UserCard from "./UserCard";
 import axios from "axios";
 import ApiData from "../../Api/ApiData";
+import Uploaduser from "./Uploaduser";
 axios.defaults.withCredentials = true;
 const AllUsers = () => {
   const [isupload, setisupload] = useState(false);
