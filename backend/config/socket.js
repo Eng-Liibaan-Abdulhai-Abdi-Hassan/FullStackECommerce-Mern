@@ -30,7 +30,6 @@ const {
   DeleteCategory,
 } = require("../controller/CategoryController");
 
-
 const io = new Server(server, {
   cors: {
     origin: "http://localhost:4000",
@@ -48,10 +47,9 @@ io.on("connection", (socket) => {
   if (userid) SocketMapData[userid] = socket.id;
   io.emit("Online", Object.keys(SocketMapData));
 
- 
   //sidebar
   socket.on("sidebar", async (id) => {
-    let convesationmap = await GetconversationDetails(id, id)
+    let convesationmap = await GetconversationDetails(id, id);
     let getconversationdetail = convesationmap?.map((data) => {
       let unseen = data?.message.reduce((prev, curr) => {
         return prev + (curr.unseen ? 0 : 1);
