@@ -33,7 +33,7 @@ const {
 
 const io = new Server(server, {
   cors: {
-    origin: "https://fullstackecommerce-mern.onrender.com",
+    origin: "http://localhost:4000",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   },
