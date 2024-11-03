@@ -47,13 +47,12 @@ const OrderPayment = async (req, res) => {
     billing_address_collection: "auto",
     payment_method_types: ["card"],
     line_items,
-    success_url: "http://localhost:4000/success",
-    cancel_url: "http://localhost:4000/cancel",
+    success_url: "https://fullstackecommerce-mern.onrender.com/success",
+    cancel_url: "https://fullstackecommerce-mern.onrender.com/cancel",
     customer_email: user.Email,
     metadata: {
       UserID: req.user,
     },
-   
   };
 
   let session = await stripe.checkout.sessions.create(params);
