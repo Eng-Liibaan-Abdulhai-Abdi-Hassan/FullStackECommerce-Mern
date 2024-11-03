@@ -1,4 +1,4 @@
-const endpoint = "https://fullstackecommerce-mern.onrender.com/api";
+const endpoint = "/api";
 export const header = { "Content-Type": "application/json" };
 const ApiCalls = {
   // Users

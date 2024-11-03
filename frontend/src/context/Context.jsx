@@ -14,7 +14,7 @@ const UserProvider = ({ children }) => {
   const [Online, setOnline] = useState([]);
 
   useEffect(() => {
-    const socket = io("https://fullstackecommerce-mern.onrender.com/", {
+    const socket = io("http://localhost:3000", {
       query: { UserID: authlogin?._id || "" },
       withCredentials: true,
     });
